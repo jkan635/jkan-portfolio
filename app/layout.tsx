@@ -1,12 +1,16 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Jonathan Kan | Software Engineer',
   description: 'Software Engineer | Bachelor of Computer Science',
+  icons: {
+    icon: '/icon.png',
+  }
 }
 
 export default function RootLayout({
@@ -16,7 +20,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={inter.className}>{children}</body>
     </html>
   )
