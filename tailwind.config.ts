@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        '128': '32rem',
+      },
+      fontSize: {
+        '2xs': '0.625rem'
+      },
       animation: {
         typing: 'typing 2s steps(17), blink 1s infinite',
       },

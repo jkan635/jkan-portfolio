@@ -19,7 +19,7 @@ export default function Home() {
       <div className="w-full h-full min-h-screen flex justify-center">
           <div className="max-w-7xl relative flex flex-col lg:flex-row mx-8 py-32 lg:py-0 gap-8 justify-between">
               
-              <div className="lg:sticky lg:top-0 lg:max-h-screen lg:py-32 flex flex-col justify-between gap-6 lg:gap-8">
+              <div className="lg:sticky lg:top-0 lg:max-h-screen lg:py-32 flex flex-col justify-between h-128 lg:h-auto gap-6 lg:gap-8">
                   <div className="flex flex-col gap-2">
                       <h1 className="w-fit overflow-hidden whitespace-nowrap text-md md:text-lg text-sky-400 animate-typing border-r-4">Hello! My name is...</h1>
                       <Transition
@@ -82,19 +82,22 @@ export default function Home() {
 
               <div className="flex flex-col gap-4 lg:py-24 flex-none lg:w-2/5">
                   <div className="flex flex-col gap-4 rounded bg-slate-900 p-4">
-                      <div className="text-lg md:text-xl text-slate-200">Experience</div>
+                      <div className="flex flex-row justify-between items-center gap-4">
+                        <div className="flex-none text-base md:text-xl text-sky-400">Experience</div>
+                        <div className="h-0.5 w-full bg-sky-900 rounded"></div>
+                      </div>
                       {resume.experiences.map((experience, index) => 
                           <Disclosure key={`${experience.title}_${index}`} defaultOpen={index == 0}>
                               {({ open }) => (
                                   <>
                                       <Disclosure.Button className="flex flex-col w-full rounded bg-slate-800 px-4 py-2 hover:bg-slate-700">
                                           <div className='w-full flex flex-row items-center justify-between'>
-                                              <div className='text-base md:text-lg text-slate-300'>{experience.title}</div>
-                                              <div className='text-xs md:text-sm text-slate-500'>{experience.startDate.toLocaleString('default', { month: 'short', year: '2-digit' })} - {experience.endDate.toLocaleString('default', { month: 'short', year: '2-digit' })}</div>
+                                              <div className='text-left text-sm md:text-lg text-slate-300'>{experience.title}</div>
+                                              <div className='flex-none text-right text-2xs md:text-sm text-slate-500'>{experience.startDate.toLocaleString('default', { month: 'short', year: '2-digit' })} - {experience.endDate.toLocaleString('default', { month: 'short', year: '2-digit' })}</div>
                                           </div>
                                           <div className='w-full flex flex-row items-center justify-between'>
-                                              <div className='text-sm md:text-base text-slate-500'>{experience.name} | {experience.location}</div>
-                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={`w-6 h-6 fill-slate-500 transition ease-in-out duration-300 ${open ? '' : 'rotate-180'}`}>
+                                              <div className='text-left text-sm md:text-base text-slate-500'>{experience.name} | {experience.location}</div>
+                                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={`w-4 h-4 md:w-6 md:h-6 fill-slate-500 transition ease-in-out duration-300 ${open ? '' : 'rotate-180'}`}>
                                                   <path fillRule="evenodd" d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z" clipRule="evenodd" />
                                               </svg>
                                           </div>
@@ -131,13 +134,16 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-col gap-4 rounded bg-slate-900 p-4">
-                      <div className="text-lg md:text-xl text-slate-200">Education</div>
+                    <div className="flex flex-row justify-between items-center gap-4">
+                        <div className="flex-none text-base md:text-xl text-sky-400">Education</div>
+                        <div className="h-0.5 w-full bg-sky-900 rounded"></div>
+                      </div>
                       <div className="flex flex-col w-full rounded bg-slate-800 px-4 py-2 ">
                           <div className='w-full flex flex-row items-center justify-between'>
-                              <div className='text-base md:text-lg text-slate-300'>{resume.education.degree}</div>
-                              <div className='text-xs md:text-sm text-slate-500'>{resume.education.startDate.toLocaleString('default', { month: 'short', year: '2-digit' })} - {resume.education.endDate.toLocaleString('default', { month: 'short', year: '2-digit' })}</div>
+                              <div className='text-left text-sm md:text-lg text-slate-300'>{resume.education.degree}</div>
+                              <div className='flex-none text-right text-2xs md:text-sm text-slate-500'>{resume.education.startDate.toLocaleString('default', { month: 'short', year: '2-digit' })} - {resume.education.endDate.toLocaleString('default', { month: 'short', year: '2-digit' })}</div>
                           </div>
-                          <div className='text-sm md:text-base text-slate-500'>{resume.education.name}</div>
+                          <div className='text-left text-sm md:text-base text-slate-500'>{resume.education.name}</div>
                       </div>
                   </div>
               </div>
