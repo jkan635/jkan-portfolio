@@ -8,10 +8,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      animation: {
+        typing: 'typing 2s steps(17), blink 1s infinite',
+      },
+      keyframes: {
+        typing: {
+          from: { width: '0' },
+          to: { width: '15ch' },
+        },
+        blink: {
+          from: {
+            'border-right-color': 'transparent'
+          },
+          to: {
+            'border-right-color': 'white'
+          },
+        },
       },
     },
   },
