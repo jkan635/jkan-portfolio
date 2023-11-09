@@ -16,7 +16,7 @@ export default function Home() {
     }, []);
 
     return (
-      <div className="w-full h-full bg-slate-950 min-h-screen flex justify-center">
+      <div className="w-full h-full bg-gradient-to-b md:bg-gradient-to-r from-slate-900 to-slate-950 min-h-screen flex justify-center">
           <div className="max-w-7xl relative flex flex-col lg:flex-row mx-8 py-32 lg:py-0 gap-8 justify-between">
               
               <div className="lg:sticky lg:top-0 lg:max-h-screen lg:py-32 flex flex-col justify-between h-128 lg:h-auto gap-6 lg:gap-8">
@@ -115,7 +115,7 @@ export default function Home() {
                                               <div className='flex flex-col gap-2'>
                                                   {experience.points.map((point, index) => 
                                                       <div className="text-sm text-slate-400" key={`${experience.title}_point_${index}`}>
-                                                          • {point}
+                                                          {point}
                                                       </div>
                                                   )}
                                                   {experience.skills.length > 0 && <div className='mt-2 flex flex-wrap gap-2'>
