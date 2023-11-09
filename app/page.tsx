@@ -39,8 +39,8 @@ export default function Home() {
                               It is built with React, Next.js and Tailwind CSS, deployed using Vercel.
                               As you read this I am improving and iterating it.
                               <br /><br />
-                              I have had the privilege of venturing into many different industries and enviroments, from a provincial and federal government, to large firm tech consulting, and finally to a fast-paced small startup. 
-                              Each step of the way I have taken many roles, as backend developer, frontend developer, and mobile developer for both iOS and Android, proving that I am a fast learner and asset to any team I join.
+                              I have had the privilege of venturing into many different industries and environments, from a provincial and federal government to large firm tech consulting, and finally to a fast-paced small startup. 
+                              Each step of the way I have taken many roles, as a backend developer, frontend developer, and mobile developer for both iOS and Android, proving that I am a fast learner and an asset to any team I join.
                               <br /><br />
                               Thank you for taking the time to visit my website, please feel free to contact me with any opportunities!
                               Let&apos;s build some cool stuff!
