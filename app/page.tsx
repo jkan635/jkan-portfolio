@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { resume } from '../helpers/api';
 import { Disclosure, Transition } from '@headlessui/react';
 import Pill from '../components/Pill';
-import Image from 'next/image'
 
 export default function Home() {
 
@@ -44,7 +43,7 @@ export default function Home() {
                               Each step of the way I have taken many roles, as backend developer, frontend developer, and mobile developer for both iOS and Android, proving that I am a fast learner and asset to any team I join.
                               <br /><br />
                               Thank you for taking the time to visit my website, please feel free to contact me with any opportunities!
-                              Let's build some cool stuff!
+                              Let&apos;s build some cool stuff!
                           </div>
                       </Transition>
                   </div>
