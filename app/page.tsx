@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { resume } from '../helpers/api';
 import { Disclosure, Transition } from '@headlessui/react';
 import Pill from '../components/Pill';
+import { getFormatedDateString } from '@/helpers/dateHelper';
 
 export default function Home() {
 
@@ -93,7 +94,7 @@ export default function Home() {
                                       <Disclosure.Button className="flex flex-col w-full rounded bg-slate-800 px-4 py-2 hover:bg-slate-700">
                                           <div className='w-full flex flex-row items-center justify-between'>
                                               <div className='text-left text-sm md:text-lg text-slate-300'>{experience.title}</div>
-                                              <div className='flex-none text-right text-2xs md:text-sm text-slate-500'>{experience.startDate.toLocaleString('default', { month: 'short', year: '2-digit' })} - {experience.endDate.toLocaleString('default', { month: 'short', year: '2-digit' })}</div>
+                                              <div className='flex-none text-right text-2xs md:text-sm text-slate-500'>{getFormatedDateString(experience.startDate)} - {getFormatedDateString(experience.endDate)}</div>
                                           </div>
                                           <div className='w-full flex flex-row items-center justify-between'>
                                               <div className='text-left text-sm md:text-base text-slate-500'>{experience.name} | {experience.location}</div>
@@ -141,7 +142,7 @@ export default function Home() {
                       <div className="flex flex-col w-full rounded bg-slate-800 px-4 py-2 ">
                           <div className='w-full flex flex-row items-center justify-between'>
                               <div className='text-left text-sm md:text-lg text-slate-300'>{resume.education.degree}</div>
-                              <div className='flex-none text-right text-2xs md:text-sm text-slate-500'>{resume.education.startDate.toLocaleString('default', { month: 'short', year: '2-digit' })} - {resume.education.endDate.toLocaleString('default', { month: 'short', year: '2-digit' })}</div>
+                              <div className='flex-none text-right text-2xs md:text-sm text-slate-500'>{getFormatedDateString(resume.education.startDate)} - {getFormatedDateString(resume.education.endDate)}</div>
                           </div>
                           <div className='text-left text-sm md:text-base text-slate-500'>{resume.education.name}</div>
                       </div>

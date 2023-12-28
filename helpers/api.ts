@@ -4,6 +4,18 @@ import { Education, Resume, Skills, WorkExperience } from "../models/Resume";
 
 const experiences: WorkExperience[] = [
     {
+        name: "Freelance",
+        imageURL: "",
+        title: "Freelance Software Developer",
+        location: "Remote",
+        startDate: new Date(2023,  10),
+        endDate: new Date(),
+        points: [
+            "Played a significant role in the development of an iOS application that integrates multiple GPT models. Specifically, features to allow users to ask questions about uploaded legal documents, and revise messages between users, ensuring a more diplomatic tone."
+        ],
+        skills: ["Swift", "SwiftUI", "Firebase", "GPT-4", "GPT-3.5", "Git", "XCode"]
+    },
+    {
         name: "Verdict MMA",
         imageURL: "",
         title: "Senior Full Stack Engineer",
